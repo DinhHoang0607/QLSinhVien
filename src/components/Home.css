@@ -1,0 +1,84 @@
+.pagination {
+  list-style: none;
+<<<<<<< HEAD
+  display: inline-block;
+  padding: 0;
+  margin-top: 10px;
+=======
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 30px;
+>>>>>>> a9398e5 (fix1)
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #fff;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+.modal-4 a {
+    margin: 0 5px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #f7c12c;
+  }
+  .modal-4 a.prev {
+    -moz-border-radius: 50px 0 0 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px 0 0 50px;
+    width: 100px;
+  }
+  .modal-4 a.next {
+    -moz-border-radius: 0 50px 50px 0;
+    -webkit-border-radius: 0;
+    border-radius: 0 50px 50px 0;
+    width: 100px;
+  }
+  .modal-4 a:hover {
+    background-color: #ffa500;
+  }
+  .modal-4 a.active, .modal-4 a:active {
+    background-color: #ffa100;
+  }
+<<<<<<< HEAD
+  
+=======
+  
+  .dropdown{
+    background-color: #f7c12c;
+    border: none;
+    border-radius: 3px;
+    width: 50px;
+text-align: center;
+color: #fff;
+height: 30px;
+
+  }
+  .dropdown:hover{
+    background-color: #ffa500;
+    cursor: pointer;
+    
+  }
+>>>>>>> a9398e5 (fix1)
