@@ -1,16 +1,13 @@
 .pagination {
   list-style: none;
-<<<<<<< HEAD
   display: inline-block;
   padding: 0;
   margin-top: 10px;
-=======
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   margin-top: 30px;
->>>>>>> a9398e5 (fix1)
 }
 .pagination li {
   display: inline;
@@ -62,9 +59,6 @@
   .modal-4 a.active, .modal-4 a:active {
     background-color: #ffa100;
   }
-<<<<<<< HEAD
-  
-=======
   
   .dropdown{
     background-color: #f7c12c;
@@ -75,10 +69,10 @@ text-align: center;
 color: #fff;
 height: 30px;
 
+
   }
   .dropdown:hover{
     background-color: #ffa500;
     cursor: pointer;
     
   }
->>>>>>> a9398e5 (fix1)

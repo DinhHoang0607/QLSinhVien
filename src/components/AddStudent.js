@@ -6,6 +6,7 @@ import axios from 'axios';
 import './AddStudent.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Location from './Location';
 
 const AddStudent = ({ token }) => {
 	const [name, setName] = useState('');
@@ -14,7 +15,7 @@ const AddStudent = ({ token }) => {
 	const [phoneNumber, setPhoneNumber] = useState('');
 	const [identifyCard, setIdentifyCard] = useState('');
 	const [address, setAddress] = useState('');
-	const [addressLive, setAddressLive] = useState('');
+	// const [addressLive, setAddressLive] = useState('');
 	const [birthday, setBirthday] = useState('');
 	const [major, setMajor] = useState('');
 	const [nation, setNation] = useState('');
@@ -25,7 +26,7 @@ const AddStudent = ({ token }) => {
 	const [error, setError] = useState(null);
 
 	let history = useNavigate();
-	console.log(avatar);
+	console.log(birthday + ' 00:00:00');
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -46,12 +47,12 @@ const AddStudent = ({ token }) => {
 						QUEQUANTINH: 1,
 						QUEQUANHUYEN: 0,
 						QUEQUANXA: 0,
-						QUEQUANDIACHI: 'Thanh Hoá',
+						QUEQUANDIACHI: address,
 						NOIOTINH: 10,
 						NOIOHUYEN: 0,
 						NOIOXA: 0,
-						NOIODIACHI: 'Hà Nội',
-						NGAYSINH: '1996-11-11 00:00:00',
+						NOIODIACHI: 'Ha Noi',
+						NGAYSINH: birthday + ' 00:00:00',
 						CHUYENNGANH: major,
 						DANTOC: nation,
 						TONGIAO: religion,
@@ -99,7 +100,7 @@ const AddStudent = ({ token }) => {
 			setAvatar(file[0]);
 		}
 	};
-
+	console.log(address);
 	return (
 		<div>
 			<h1 className='text-center pt-5'>CREATE STUDENT</h1>
@@ -176,28 +177,10 @@ const AddStudent = ({ token }) => {
 						<Form.Control
 							type='number'
 							placeholder='So cmnd/cccd'
-							//required
 							onChange={(e) => setIdentifyCard(e.target.value)}
 						></Form.Control>
 					</Form.Group>
-					{/* <Form.Group className='mb-3' controlId='formName'>
-					<Form.Select onChange={(e) => setName(e.target.value)}>
-						<option>Tỉnh/ Thành phố</option>
-						<option value='1'>One</option>
-					</Form.Select>
-				</Form.Group>
-				<Form.Group className='mb-3' controlId='formName'>
-					<Form.Select onChange={(e) => setName(e.target.value)}>
-						<option>Quận/ Huyện</option>
-						<option value='1'>One</option>
-					</Form.Select>
-				</Form.Group>
-				<Form.Group className='mb-3' controlId='formName'>
-					<Form.Select onChange={(e) => setName(e.target.value)}>
-						<option>Phường/ Xã</option>
-						<option value='1'>One</option>
-					</Form.Select>
-				</Form.Group> */}
+					<Location setAddress={setAddress} />
 					<Form.Group className='mb-3' controlId='formName'>
 						<Form.Label>Ngày sinh</Form.Label>
 						<Form.Control
@@ -210,7 +193,6 @@ const AddStudent = ({ token }) => {
 						<Form.Control
 							type='text'
 							placeholder='Chuyên ngành'
-							//required
 							onChange={(e) => setMajor(e.target.value)}
 						></Form.Control>
 					</Form.Group>
@@ -219,7 +201,6 @@ const AddStudent = ({ token }) => {
 						<Form.Control
 							type='text'
 							placeholder='Dân tộc'
-							//required
 							onChange={(e) => setNation(e.target.value)}
 						></Form.Control>
 					</Form.Group>
@@ -228,7 +209,6 @@ const AddStudent = ({ token }) => {
 						<Form.Control
 							type='text'
 							placeholder='Tôn giáo'
-							//required
 							onChange={(e) => setReligion(e.target.value)}
 						></Form.Control>
 					</Form.Group>
@@ -283,4 +263,4 @@ const AddStudent = ({ token }) => {
 
 export default AddStudent;
 
-const style = {};
+

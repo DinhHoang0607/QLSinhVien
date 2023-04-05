@@ -53,24 +53,13 @@ function App() {
 				// 	backgroundImage: `url("https://cdn.pixabay.com/photo/2018/04/28/22/03/tree-3358468_960_720.jpg")`,
 				// }}
 			>
-<<<<<<< HEAD
-				<h1 class='title'>Loading</h1>
-				<div class='rainbow-marker-loader'></div>
-=======
 				<h1 className='title'>Loading</h1>
 				<div className='rainbow-marker-loader'></div>
->>>>>>> a9398e5 (fix1)
 			</div>
 		);
 	}
 	return (
-		<div
-<<<<<<< HEAD
-			
-=======
-		className='container-app'
->>>>>>> a9398e5 (fix1)
-		>
+		<div className='container-app'>
 			<Router>
 				<Routes>
 					<Route path='/' element={<Home token={token} />} />
@@ -78,7 +67,7 @@ function App() {
 					<Route path='/edit/:id' element={<EditStudent token={token} />} />
 				</Routes>
 			</Router>
-			<ToastContainer/>
+			<ToastContainer />
 		</div>
 	);
 }

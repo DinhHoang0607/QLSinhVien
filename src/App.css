@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 @import url("https://fonts.googleapis.com/css?family=Material+Icons");
@@ -17,7 +15,6 @@ html, body {
   overflow: auto;
 }
 
->>>>>>> a9398e5 (fix1)
 :root{
     /* animations constants */
     --steps: 10;
@@ -307,13 +304,10 @@ html, body {
   }
   body{
     color: blue;
-<<<<<<< HEAD
-=======
   }
   .container-app{
     height: 100%;
     min-height: 100vh;
     background: rgb(34,193,195);
 background: linear-gradient(171deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
->>>>>>> a9398e5 (fix1)
   }

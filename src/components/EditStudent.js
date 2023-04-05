@@ -25,20 +25,15 @@ const EditStudent = ({ token }) => {
 	const [avatar, setAvatar] = useState('');
 	const [religion, setReligion] = useState('');
 	const [student, setStudent] = useState(null);
-	// const [loading, setLoading] = useState(true);
 
 	const { id } = useParams();
-	// console.log(params.id);
 
 	let history = useNavigate();
-	// console.log(token);
 
 	useEffect(() => {
 		if (id) {
 			getById();
 		}
-
-		// setLoading(false);
 	}, []);
 
 	const getById = async () => {
@@ -171,7 +166,6 @@ const EditStudent = ({ token }) => {
 									type='tel'
 									defaultValue={phoneNumber}
 									placeholder='So dien thoai'
-									// pattern='[0][0-9]{9}'
 									required
 									onChange={(e) => setPhoneNumber(e.target.value)}
 								></Form.Control>
@@ -240,13 +234,6 @@ const EditStudent = ({ token }) => {
 								<Form.Control type='file'></Form.Control>
 							</Form.Group>
 						</div>
-						<Button
-							style={{ width: '30%' }}
-							onClick={(e) => handleSubmit(e)}
-							type='button'
-						>
-							Submit
-						</Button>
 						<div className='buttons'>
 							<button onClick={(e) => handleSubmit(e)} type='button'>
 								Lưu
